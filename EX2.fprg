@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EX2"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-21 11:06:21 "/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjEwOjM1OjAyICI7Mjc1NQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjExOjA2OjIxICI7MjsyODY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorCompra" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite o valor da compra:&quot;" newline="True"/>
+            <input variable="valorCompra"/>
+            <if expression="valorCompra &gt;= 150">
+                <then>
+                    <declare name="desconto, novoTotal" type="Real" array="False" size=""/>
+                    <assign variable="desconto" expression="valorCompra * 0.02"/>
+                    <assign variable="novoTotal" expression="valorCompra - desconto"/>
+                    <output expression="&quot;O valor do desconto &#233;: R$&quot; &amp; ToFixed(desconto, 2) &amp; &quot; e o novo total a ser pago &#233;: R$&quot; &amp; ToFixed(novoTotal, 2)" newline="True"/>
+                </then>
+                <else>
+                    <declare name="cashback" type="Real" array="False" size=""/>
+                    <assign variable="cashback" expression="valorCompra * 0.02"/>
+                    <output expression="&quot;O valor total da compra &#233;: R$&quot; &amp; ToFixed(valorCompra, 2) &amp; &quot; e o valor do cashback de 2% &#233; de R$: &quot; &amp; ToFixed(cashback, 2)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
