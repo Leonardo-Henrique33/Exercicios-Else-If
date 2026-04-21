@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EX3"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-21 12:13:26 "/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjEyOjAxOjU1ICI7Mjc1OA=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjEyOjEzOjI2ICI7MTsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="senhaCadastrada, senhaConfirmacao" type="String" array="False" size=""/>
+            <output expression="&quot;Cadastre uma senha:&quot;" newline="True"/>
+            <input variable="senhaCadastrada"/>
+            <output expression="&quot;Digite novamente a senha para confirma&#231;&#227;o:&quot;" newline="True"/>
+            <input variable="senhaConfirmacao"/>
+            <if expression="senhaCadastrada = senhaConfirmacao">
+                <then>
+                    <output expression="&quot;Acesso permitido.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Senha incorreta.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
