@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EX4"/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-21 12:41:52 "/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjEyOjM0OjU2ICI7Mjc2NQ=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC00UU9JOFVKOzIwMjYtMDQtMjE7IjEyOjQxOjUyICI7MTsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura" type="Real" array="False" size=""/>
+            <output expression="&quot;Informe sua altura em metros:&quot;" newline="True"/>
+            <input variable="altura"/>
+            <if expression="altura &gt;= 1.40">
+                <then>
+                    <output expression="&quot;Sua altura &#233; &quot; &amp; altura&amp;&quot;m Pode entrar no brinquedo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Sua altura &#233; &quot; &amp; altura&amp;&quot;m Altura insuficiente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
