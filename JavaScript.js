@@ -1,12 +1,8 @@
-let altura = Number(prompt("Informe sua altura em metros:"));
+let senhaCadastrada = prompt("Cadastre uma senha:");
+let senhaConfirmacao = prompt("Digite novamente a senha para confirmação:");
 
-if (isNaN(altura)) {
-    alert("Erro: Insira um número válido.");
+if (senhaCadastrada === senhaConfirmacao) {
+    alert("Acesso permitido.");
 } else {
-
-    if (altura >= 1.40) {
-        alert("Pode entrar no brinquedo.");
-    } else {
-        alert("Altura insuficiente.");
-    }
+    alert("Senha incorreta.");
 }
