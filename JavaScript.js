@@ -1,19 +1,22 @@
-let numero = Number(prompt("Digite um número"));
+let valorCompra = Number(prompt("Digite o valor da compra:"));
 
-// A função isNaN (is Not a Number) verifica se o valor da variável não é um número válido
+// Validação com isNaN
+if (isNaN(valorCompra)) {
+    alert("Erro: O valor digitado não é um número!");
+} else {
 
-if (isNaN(numero)) {
+    if (valorCompra >= 150) {
+        let desconto = valorCompra * 0.02;
+        let novoTotal = valorCompra - desconto;
 
-    alert("Por favor, diigite um número");
-}
+      
+        alert(`Valor do desconto: R$ ${desconto.toFixed(2)}
+Novo valor total: R$ ${novoTotal.toFixed(2)}`);
 
-else {
-
-    // O operador % (módulo) retorna o resto da divisão. 
-    // Se o resto da divisão por 2 for zero, o número é par.
-    if (numero % 2 === 0) {
-        alert("O número é par.");
     } else {
-        alert("O número digitado é ímpar.");
+        let cashback = valorCompra * 0.02;
+
+        alert(`Valor total da compra: R$ ${valorCompra.toFixed(2)}
+Cashback de 2%: R$ ${cashback.toFixed(2)}`);
     }
-}   
+}
